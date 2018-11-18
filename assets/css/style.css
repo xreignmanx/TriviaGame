@@ -1,0 +1,17 @@
+h1 {
+    background-color: yellow;
+    font-size: 40px;
+    font-family: comic;
+    color: blue;
+    text-align: center;
+}
+
+#container {
+    background-color: blue;
+    width: 100%;
+}
+.game {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-around;
+}
