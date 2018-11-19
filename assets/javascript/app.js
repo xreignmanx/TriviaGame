@@ -1,21 +1,41 @@
 
 
-// Create counter to start at the beginning of the game
-var timeLeft = 30;
-var timerId = setInterval(countdown, 1000);
+// // Create counter to start at the beginning of the game
+// var timeLeft = 30;
+// var timerId = setInterval(countdown, 1000);
 
-function countdown() {
-  if (timeLeft == 0) {
-    clearTimeout(timerId);
-//    endGame;
-  } else {
-    timeLeft--;
-    $("#timer").html("Time Remaining" + timeLeft);
-    console.log(timeLeft);
+// function countdown() {
+//   if (timeLeft == 0) {
+//     clearTimeout(timerId);
+// //    endGame;
+//   } else {
+//     timeLeft--;
+//     $("#timer").html("Time Remaining" + timeLeft);
+//     console.log(timeLeft);
 
-  }
-}
-// create variables
+    var count=30;
+
+    var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+    
+    function timer()
+    {
+      if (count == 0) {
+         clearInterval(counter);
+         endGame;
+      } else {
+          count--,
+          $("#timer").html("Time Remaining: "  + counter);
+      }
+         //counter ended, do something here
+         $("#timer").html("Time Remaining" + count);
+      } 
+    
+      //Do code for showing the number of seconds here
+    
+    
+
+
+  // create variables
 var userPick;
 var questNum = 0;
 var corrAns = 0;
@@ -69,7 +89,7 @@ var questions = [{
 {
     Question: "Which country is home to the kangaroo?",
     choices: ["Tasmania", "Austria", "Brazil", "Australia"],
-    correctAns: 4,
+    correctAns: 3,
 },
 {
     Question: "What does Fred Flintstone wear around his neck?", 
@@ -92,11 +112,61 @@ var questions = [{
 },
 {
     Question: "Which English king had six wives?",
-    choices: ["Henry 8th", "Charles III", "Patrick IV", "Duffy"
-    ],
+    choices: ["Henry 8th", "Charles III", "Patrick IV", "Duffy the Bold"],
     correctAns: 0,
-}]
+}];
 
+var beginGame = {
+    if (questNum === 10) {
+        $("#question").html("GAME OVER");
+        endGame 
+    }, else {
+        
+        for (i = 0; i < questions.length; index++);
+        $("#question").html(questions.Question);
+        $("#a1").html(choices[0]);
+        $("#a2").html(choices[1]);
+        $("#a3").html(choices[2]);
+        $("#a4").html(choices[3]);
+
+    $("#a1").on("click"{
+        questNum++,
+        if(choices[0] === correctAns){
+            corrAns++;
+            beginGame;
+        } else {
+            incorrAns++;
+            beginGame;
+        }
+    $("#a2").on("click"{
+        questNum++,
+        if(choices[1] === correctAns){
+            corrAns++;
+            beginGame;
+        } else {
+            incorrAns++;
+            beginGame;
+        }
+    $("#a3").on("click"{
+        questNum++,
+        if(choices[2] === correctAns){
+            corrAns++;
+            beginGame;
+        } else {
+            incorrAns++;
+            beginGame;
+        }
+    $("#a4").on("click"{
+        questNum++,
+        if(choices[3] === correctAns){
+            corrAns++;
+            beginGame;
+        } else {
+            incorrAns++;
+            beginGame;
+        }
+
+    });
 
 
 

@@ -5,13 +5,7 @@ h1 {
     color: blue;
     text-align: center;
 }
-/* 
-#container {
-    background-color: blue;
-    width: 100%;
+
+#timer {
+    margin: 10px;
 }
-#jumbotron {
-    background-color: yellow;
-    display: flex;
-    justify-content: space-around;
-} */
