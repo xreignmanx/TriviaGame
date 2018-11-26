@@ -19,16 +19,16 @@
     
     function timer()
     {
-      if (count == 0) {
-         clearInterval(counter);
-         endGame;
-      } else {
-          count--,
-          $("#timer").html("Time Remaining: "  + counter);
-      }
-         //counter ended, do something here
-         $("#timer").html("Time Remaining" + count);
-      } 
+        if (count == 0) {
+            clearInterval(counter);
+            endGame;
+        } else {
+            count--,
+            $("#timer").html("Time Remaining: "  + counter);
+        }
+            //counter ended, do something here
+            $("#timer").html("Time Remaining" + count);
+    } 
     
       //Do code for showing the number of seconds here
     
@@ -116,21 +116,25 @@ var questions = [{
     correctAns: 0,
 }];
 
-var beginGame = {
-    if (questNum === 10) {
+var beginGame; 
+var i;
+
+   function beginGame() {
+    if (questNum = 10) {
         $("#question").html("GAME OVER");
         endGame 
-    }, else {
-        
-        for (i = 0; i < questions.length; index++);
+} else {
+
+        for (i = 0, i < questions.length, i++)  {
         $("#question").html(questions.Question);
         $("#a1").html(choices[0]);
         $("#a2").html(choices[1]);
         $("#a3").html(choices[2]);
         $("#a4").html(choices[3]);
+        
 
-    $("#a1").on("click"{
-        questNum++,
+    $("#a1").on("click", function() {
+        questNum++;
         if(choices[0] === correctAns){
             corrAns++;
             beginGame;
@@ -138,8 +142,9 @@ var beginGame = {
             incorrAns++;
             beginGame;
         }
-    $("#a2").on("click"{
-        questNum++,
+    },
+    $("#a2").on("click", function() {
+        questNum++;
         if(choices[1] === correctAns){
             corrAns++;
             beginGame;
@@ -147,8 +152,9 @@ var beginGame = {
             incorrAns++;
             beginGame;
         }
-    $("#a3").on("click"{
-        questNum++,
+    },
+    $("#a3").on("click", function() {
+        questNum++;
         if(choices[2] === correctAns){
             corrAns++;
             beginGame;
@@ -156,8 +162,9 @@ var beginGame = {
             incorrAns++;
             beginGame;
         }
-    $("#a4").on("click"{
-        questNum++,
+    },
+    $("#a4").on("click", function() {
+        questNum++;
         if(choices[3] === correctAns){
             corrAns++;
             beginGame;
@@ -166,13 +173,12 @@ var beginGame = {
             beginGame;
         }
 
-    });
+    }
+    }
 
 
 
 // Player can only answer once for each question
 // Game ends when time runs out.
 // Page will reveal number of correct answers and number of incorrect answers.
-
-
 

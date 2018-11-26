@@ -1,11 +1,18 @@
-h1 {
-    background-color: yellow;
-    font-size: 40px;
-    font-family: comic;
-    color: blue;
-    text-align: center;
+
+p {
+    border-style: solid;
+    border: 2px;
+    border-color: white;
+    display: flex;
+}
+
+.quiz {
+    background-color: blue;
+    justify-content: center;
 }
 
 #timer {
-    margin: 10px;
+    border-style: solid;
+    border: 2px;
+    border-color: white;
 }
